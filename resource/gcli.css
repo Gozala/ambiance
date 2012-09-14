@@ -38,7 +38,12 @@
   background: #333;
 }
 
-
+.ambiance .gcli-in-complete {
+  z-index: 22;
+  position: fixed;
+  left: 45;
+  outline: none;
+}
 
 .ambiance .gcli-input
 {
@@ -63,7 +68,7 @@
 
 /* Highlight input when focused */
 .ambiance .gcli-input:focus {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .ambiance .gcli-panel
@@ -101,9 +106,16 @@
 .ambiance .gcli-row-prompt,
 .ambiance .gcli-row-prompt.gcli-row-complete,
 
-.ambiance .gcli-help-name
+.ambiance .gcli-help-name,
+
+.ambiance .gcli-in-ontab,
+.ambiance .gcli-in-todo
 {
   color: hsl(25,78%,50%);
+}
+
+.ambiance .gcli-in-complete .gcli-in-incomplete {
+  border-bottom: 1px dotted hsl(25,78%,50%);
 }
 
 .ambiance .gcli-out-shortcut,
