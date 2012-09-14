@@ -1,0 +1,11 @@
+CACHE MANIFEST
+
+# v0.0.8
+
+../index.html
+./codemirror-compressed.js
+./gcli.js
+
+./codemirror.css
+./ambiance.css
+./gcli.css

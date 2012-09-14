@@ -1,0 +1,18 @@
+{
+  "version": "0.1",
+  "name": "ambiance",
+  "description": "Code editor.",
+  "icons": {
+    "128": "./icon-128.png"
+  },
+  "launch_path": "./",
+  "developer": {
+    "name": "Irakli Gozalishvili",
+    "url": "http://jeditoolkit.com"
+  },
+  "installs_allowed_from": [
+    "http://localhost",
+    "https://marketplace.mozilla.org"
+  ],
+  "default_locale": "en"
+}
