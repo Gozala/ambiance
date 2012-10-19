@@ -1,4 +1,4 @@
-<html manifest="./resource/app.manifest">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="author" content="Irakli Gozalishvili">
@@ -6,8 +6,6 @@
     <link rel=stylesheet href=./resource/codemirror.css>
     <link rel=stylesheet href=./resource/ambiance.css>
     <link rel=stylesheet href=./resource/gcli.css>
-    <script src=./resource/codemirror-compressed.js></script>
-    <script src=./resource/gcli.js></script>
     <style>
       html, body {
         font-size: 12px;
@@ -29,43 +27,9 @@
     </style>
   </head>
   <body class=ambiance>
-    <div id=input name=input></div>
-    <div id=gcli-display></div>
-    <input id=gcli-input class=gcli-input type=text autofocus/>
     <script>
-      var input = CodeMirror(document.getElementById("input"), {
-        lineNumbers: true,
-        autoClearEmptyLines: true,
-        tabSize: 2,
-        indentWithTabs: false,
-        electricChars: true,
-        autoClearEmptyLines: true,
-        mode: "clojure",
-        theme: "ambiance",
-        autofocus: true,
-        fixedGutter: true,
-        matchBrackets: true,
-        onFocus: function() {
-          document.getElementById('gcli-display').hidden = true
-        },
-        onBlur: function() {
-          document.getElementById('gcli-display').hidden = false
-        },
-        onCursorActivity: function() {
-          input.setLineClass(hlLine, null, null);
-          hlLine = input.setLineClass(input.getCursor().line, null, "activeline");
-        },
-        onGutterClick: function() {
-          var output = document.getElementById("output")
-          var input = document.getElementById("input")
-          output.hidden = !output.hidden
-          input.style.width = output.hidden ? '100%' : '50%'
-        }
-      });
-      var hlLine = input.setLineClass(0, "activeline");
-      require([ 'gcli/index', 'demo/index' ], function(gcli, focus) {
-        gcli.createDisplay();
-      });
+      global.__proto__ = window
+      require('./ambiance')
     </script>
   </body>
 </html>
