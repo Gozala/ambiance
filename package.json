@@ -1,0 +1,37 @@
+{
+  "name": "ambiance",
+  "id": "ambiance",
+  "version": "0.0.1",
+  "description": "Ambiance editor",
+  "keywords": [ "ambiance", "editor", "code" ],
+  "author": "Irakli Gozalishvili <rfobic@gmail.com> (http://jeditoolkit.com)",
+  "homepage": "https://github.com/Gozala/ambiance",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gozala/ambiance.git",
+    "web": "https://github.com/Gozala/ambiance"
+  },
+  "bugs": {
+    "url": "http://github.com/Gozala/ambiance/issues/"
+  },
+  "main": "./index.html",
+  "webkit": {
+    "webgl-disabled": true
+  },
+  "window": {
+    "toolbar": false,
+    "icon": "./resource/app.png"
+  },
+  "devDependencies": {
+    "test": ">=0.4.4",
+    "repl-utils": ">=1.0.0"
+  },
+  "scripts": {
+    "test": "node test/test-all.js",
+    "repl": "node node_modules/repl-utils"
+  },
+  "licenses": [{
+    "type" : "MIT",
+    "url" : "https://github.com/Gozala/ambiance/License.md"
+  }]
+}
