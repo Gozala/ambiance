@@ -7,7 +7,7 @@
 var hub = require("plugin-hub/core")
 var gcli = require("gcli-ambiance-plugin")
 var codemirror = require("codemirror-ambiance-plugin")
-var pluginManager = require("plugin-manager")
+var pluginManager = require("ambiance-plugin-manager")
 var fs = require("fs-ambiance-plugin")
 var commandManager = require("ambiance-command-manager")
 
